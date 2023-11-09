@@ -1,0 +1,159 @@
+/* 기본 컨테이너 스타일 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* 동영상 컨테이너 스타일 */
+.videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* 동영상 아이템 스타일 */
+.videoItem {
+  flex: 1 1 calc(50% - 16px);
+  max-width: calc(50% - 16px);
+  text-align: center;
+  margin-bottom: 16px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 좋아요 버튼 스타일 */
+.likeButton {
+  position: absolute;
+  top: 10px; /* 제목 위에 위치 */
+  right: 10px; /* 제목 오른쪽에 위치 */
+  z-index: 1;
+}
+
+.likeButton button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.likeButton button:hover {
+  background-color: #2980b9;
+}
+
+/* 동영상 썸네일 스타일 */
+.videoItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 미디어 쿼리: 화면 크기가 1024px 이상일 때 */
+@media (min-width: 1024px) {
+  .videoItem {
+    flex-basis: calc(33.33% - 16px);
+    max-width: calc(33.33% - 16px);
+  }
+}
+
+/* 미디어 쿼리: 화면 크기가 540px 이하일 때 */
+@media (max-width: 540px) {
+  .videoItem h3 {
+    font-size: 14px; /* 텍스트 크기를 작게 조정 */
+  }
+}
+
+/* 좋아요 버튼 스타일 */
+.likeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.likeButton button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.likeButton button:hover {
+  background-color: #2980b9;
+}
+
+/* 미디어 쿼리: 화면 크기가 768px 이하일 때 */
+@media (max-width: 768px) {
+  .videoItem {
+    position: relative;
+  }
+
+  /* 좋아요 버튼 스타일 변경 */
+  .likeButton {
+    position: static; /* 버튼이 다시 제목 아래에 위치하도록 설정 */
+    margin-top: 10px; /* 버튼 위 여백 추가 */
+  }
+}
+
+/* .filterContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 5px;
+} */
+
+.filterContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* width: 200px;
+    text-align: center; */
+}
+
+/* 작은 화면 (모바일) */
+@media only screen and (max-width: 768px) {
+  .filterContainer {
+    justify-content: center; /* 중앙 정렬 */
+  }
+
+  select {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+/* 더 작은 화면 */
+@media only screen and (max-width: 480px) {
+  .filterContainer {
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+  }
+
+  select {
+    padding: 3px 6px;
+    font-size: 12px;
+    width: 100%; /* 전체 너비로 확장 */
+  }
+}

@@ -1,0 +1,168 @@
+.main {
+  width: auto;
+  height: 100vh;
+}
+
+.right-feedback {
+  display: flex;
+  justify-content: space-between;
+}
+.right-feedback > button {
+  background-color: #ffe5d5;
+  border-color: white;
+  border-width: medium;
+  color: #e38981;
+  margin-right: 20%;
+  width: 10%;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.main-img {
+  width: 400px;
+  height: 350px;
+  margin-left: 20%;
+}
+
+.today-comment {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.main-left {
+  float: left;
+  width: 50%;
+  height: 90%;
+}
+
+.main-info-right {
+  float: right;
+  width: 50%;
+  height: 90%;
+  font-size: 25px;
+}
+.main-info {
+  display: flex;
+  width: 100%;
+  height: 35%;
+}
+
+.choice-box {
+  display: flex;
+  width: 80%;
+  height: 450px;
+  border: solid 2px black;
+  display: flex;
+  margin-left: 10%;
+  flex-direction: column;
+}
+
+.choice-btn {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+.choice-btn > img {
+  width: 30%;
+  height: 60%;
+}
+
+@media (max-width: 767px) {
+  .main-img {
+    width: 90%;
+    height: 70%;
+    margin: 3%;
+  }
+  .today-comment {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 15px;
+  }
+
+  .main-left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .main-info-right {
+    width: 50%;
+
+    font-size: 16px;
+  }
+  .main-info {
+    width: 100%;
+    height: 35%;
+  }
+
+  .main-info-right {
+    width: 50%;
+    height: 90%;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 668px) and (max-width: 1179px) {
+  .main-img {
+    width: 90%;
+    height: 70%;
+    margin: 3%;
+  }
+  .choice-box {
+    width: 80%;
+    height: 500px;
+    margin-left: 10%;
+  }
+  .choice-btn > img {
+    width: 30%;
+    height: 60%;
+  }
+  .choice-btn {
+    width: 100%;
+    height: 50%;
+  }
+  .right-feedback > button {
+    margin-right: 5%;
+    width: 25%;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 667px) {
+  .choice-box {
+    width: 80%;
+    height: 280px;
+    margin-left: 10%;
+  }
+  .choice-btn > img {
+    width: 30%;
+    height: 60%;
+  }
+  .choice-btn {
+    width: 100%;
+    height: 50%;
+  }
+
+  .right-feedback {
+    display: flex;
+    justify-content: space-between;
+  }
+  .right-feedback > button {
+    margin-right: 2%;
+    width: 30%;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .right-feedback > button:hover {
+    background-color: black; /* 호버 상태의 배경색 */
+    color: white; /* 호버 상태의 글자색 */
+  }
+}
